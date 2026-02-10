@@ -1,3 +1,7 @@
+# 如果没有openAPi key 可以使用下面的代理 使用gpt-3.5-turbo 非常便宜
+[代理网站](https://api.laozhang.ai/register/?aff_code=lSea])
+
+
 # mcp server 示例
 ## [server_http.py](app/mcp/server/server_http_weather.py) 
 
