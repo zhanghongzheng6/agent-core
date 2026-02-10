@@ -1,8 +1,8 @@
-# langchain_client.py
+# langchain_client_weather.py
 import asyncio
+import os
 
 from dotenv import load_dotenv
-from langchain_core.callbacks import StdOutCallbackHandler
 
 load_dotenv()  # 自动读取 .env
 from langchain_mcp_adapters.client import MultiServerMCPClient
@@ -15,7 +15,7 @@ async def main():
         {
             "math": {
                 "transport": "http",
-                "url": "http://localhost:8000/mcp",
+                "url": "https://mcp.amap.com/mcp?key="+os.getenv("AMAP_API_KEY"),
             }
         }
     )
@@ -28,7 +28,7 @@ async def main():
 
         print()
 
-    ##这里的模型字符串按你自己的 LangChain 配置来（OpenAI/Anthropic 等）
+    #这里的模型字符串按你自己的 LangChain 配置来（OpenAI/Anthropic 等）
     agent = create_agent(
         model="openai:gpt-3.5-turbo",
         tools=tools,
