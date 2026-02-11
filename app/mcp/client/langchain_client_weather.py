@@ -1,4 +1,3 @@
-# langchain_client_weather.py
 import asyncio
 
 from dotenv import load_dotenv
