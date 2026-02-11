@@ -9,5 +9,9 @@
 ## [langchain_client.py](app/mcp/client/langchain_client_weather.py)
 
 
-# 使用使用langchain的 直接集成了高德mcp api 
+# 使用langchain的 直接集成了高德mcp api 
 ## [langchain_client_amap.py](app/mcp/client/langchain_client_amap.py)
+
+
+# 使用 mysql mcp 示例
+## [langchain_client_mysql.py](app/mcp/client/langchain_client_mysql.py)

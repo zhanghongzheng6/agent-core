@@ -13,10 +13,10 @@ async def main():
     # 连接一个 HTTP MCP server（streamable-http）
     client = MultiServerMCPClient(
         {
-            "math": {
+            "amap": {
                 "transport": "http",
                 "url": "https://mcp.amap.com/mcp?key="+os.getenv("AMAP_API_KEY"),
-            }
+            },
         }
     )
 
