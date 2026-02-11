@@ -1,7 +1,7 @@
 import asyncio
 import os
 
-from agents.re_act_agent import ReActAgent
+from agents.react_agent_chat import ReActAgent
 
 
 async def main():

@@ -16,3 +16,5 @@
 # 使用 redis mcp 示例
 ## [redis_client_mcp_test.py](tests/redis_client_mcp_test.py)
 
+# 简单的聊天机器人 示例
+## [简单聊天机器人](tests/react_agent_chat_test.py)

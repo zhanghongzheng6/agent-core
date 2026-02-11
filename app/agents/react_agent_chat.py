@@ -1,10 +1,9 @@
-import asyncio
 import json
 import os
 from typing import Optional
 
 from mcp import ClientSession
-from mcp.client.streamable_http import streamablehttp_client
+from mcp.client.streamable_http import streamable_http_client
 from openai import OpenAI
 
 
@@ -14,6 +13,8 @@ class ReActAgent:
 
     def __init__(self):
         """构造函数，完成ReACT智能体的初始化"""
+        self._session_context = None
+        self._streams_context = None
         self.session: Optional[ClientSession] = None
         self.openai = OpenAI(
             base_url=os.getenv("OPENAI_API_BASE"),
@@ -27,7 +28,7 @@ class ReActAgent:
     async def connect_to_streamable_http_server(self, url: str, headers: Optional[dict] = None):
         """连接到streamable http mcp服务器"""
         print("初始化MCP服务器")
-        self._streams_context = streamablehttp_client(url=url, headers=headers)
+        self._streams_context = streamable_http_client(url=url)
         read_stream, write_stream, _ = await self._streams_context.__aenter__()
 
         self._session_context = ClientSession(read_stream, write_stream)
