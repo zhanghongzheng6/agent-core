@@ -18,3 +18,7 @@
 
 # 简单的聊天机器人 示例
 ## [简单聊天机器人](tests/react_agent_chat_test.py)
+
+# 对外如何发布a2a 卡片,供其他agent调用示例 
+## run [a2a_agent_card_test.py](tests/a2a_agent_card_test.py) 后 在游览器访问 http://127.0.0.1:8888/.well-known/agent-card.json
+## 使用 [a2a_client_test.py](tests/a2a_client_test.py) 进行连接 agent card 测试
