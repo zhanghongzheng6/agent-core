@@ -17,7 +17,7 @@ class ReActAgent:
         self._streams_context = None
         self.session: Optional[ClientSession] = None
         self.openai = OpenAI(
-            base_url=os.getenv("OPENAI_API_BASE"),
+            base_url=os.getenv("OPENAI_BASE_URL"),
             api_key=os.getenv("OPENAI_API_KEY"),
         )
         self.messages = [{

@@ -22,3 +22,7 @@
 # 对外如何发布a2a 卡片,供其他agent调用示例 
 ## run [a2a_agent_card_test.py](tests/a2a_agent_card_test.py) 后 在游览器访问 http://127.0.0.1:8888/.well-known/agent-card.json
 ## 使用 [a2a_client_test.py](tests/a2a_client_test.py) 进行连接 agent card 测试
+
+
+# 使用 pydantic 定义对象 tools 简化 使用pydantic 中预设的结构
+[pydantic_demo.py](tests/pydantic_demo.py)
